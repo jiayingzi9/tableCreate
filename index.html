@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/tabCreate.css">
+    <!--Ie10Hack-->
+    <!--[if !IE]><!--><script>
+    if (/*@cc_on!@*/false) {
+        document.documentElement.className+=' ie10';
+    }
+</script><!--<![endif]-->
+</head>
+<body>
+<div class="wrapSection">
+    <div class="ws-right">
+        <!--单行数据表格-->
+        <div class="ws-tabOuter">
+            <h1 class="pg-header">表格</h1>
+            <!--拖动表格-->
+            <div id="singleRowTable" class="tab-box TableHack9"></div>
+            <div class="ws-height20"></div>
+        </div>
+        <!--多行数据表格-->
+        <div class="ws-tabOuter">
+            <div class="ws-height20"></div>
+            <!--拖动表格-->
+            <div id="multiRowTable" class="tab-box TableHack9"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/tabCreate.js"></script><!--table生成-->
+<script src="js/tabTemJson.js"></script><!--table数据-->
+<script src="js/tabDrag.js"></script><!--table数据-->
+</body>
+</html>

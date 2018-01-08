@@ -1,0 +1,661 @@
+.clean{ clear:both; height:0; font-size: 1px; line-height: 0px; overflow:hidden; padding:0}
+.clear:after{display:block;clear:both;height:0px;margin-top:-1px;content:''}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,p {padding: 0;margin: 0;box-sizing: border-box;}
+a{ cursor:pointer;color:#000;text-decoration:none}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var,i {font-weight: normal;font-style: normal;}
+ol,ul {list-style: none;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6,i {font-weight: normal;font-size: 100%;}
+q:before,q:after {content:'';}
+abbr,acronym { border: 0;}
+body,button,input,select,table,textarea{font: normal 100% 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size:16px;line-height:1.25em;}
+body{ height:100%; font: normal 100% 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif; }
+table {border-collapse: collapse;table-layout:fixed;border-spacing: 0;}
+input,select{overflow:visible;vertical-align: middle;outline:0;border: none;}
+pre, button, input {border: none;}
+
+/*表格*/
+.ws-left{
+    float: left;
+    width:350px;
+    background:rgb(205, 205, 205);
+}
+.ws-right{
+    /*margin-left:370px;*/
+    background-color:#f4f8f9;
+}
+.ws-tabOuter{
+    margin: auto;
+    width:96%;
+}
+.ws-tdToolTip .wp-tooltip{
+    width:40px;
+}
+.ToolTipBox{
+    line-height:20px;
+}
+.wp-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.wp-tooltip .wp-tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    line-height:30px;
+    background-color: #017be3;
+    color: #fff;
+    text-align: center;
+    padding:1px 0;
+    position: absolute;
+    z-index: 1;
+    top:211%;
+    left: 83%;
+    margin-left: -60px;
+}
+
+.wp-tooltip .wp-tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #017be3 transparent;
+}
+
+.wp-tooltip:hover .wp-tooltiptext {
+    visibility: visible;
+}
+.ws-mesSet{
+    float:right;
+    margin-bottom:10px;
+}
+.SH-handle{
+    float: left;
+    padding:10px 0;
+}
+
+.ws-ud-hui{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../imgs/ws-ud-hui.png) no-repeat left transparent;
+}
+.ws-ud-hui:hover{
+    background: url(../imgs/ws-ud.png) no-repeat left transparent;
+}
+.ws-Mset-hui{
+    float:left;
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../imgs/ws-Mset-hui.png) no-repeat 98% center transparent;
+}
+.ws-Mset-blue{
+    float:left;
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../imgs/ws-Mset-blue.png) no-repeat 98% center transparent;
+}
+
+#chenkbox {
+    position: relative;
+}
+.ws-IPone-hui{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../imgs/ws-IPone-hui.png) no-repeat 98% center transparent;
+}
+.ws-IPone-hui:hover{
+    background:url(../imgs/ws-IPone.png) no-repeat left transparent;
+}
+.ws-yj-hui{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../imgs/ws-yj-hui.png) no-repeat left transparent;
+}
+.tpR i:hover{
+    background-color:#dbe2ea;
+}
+#box {
+    position: absolute;
+    display: none;
+    text-align: center;
+    top: 0;
+    background-color: #edf4fb;
+    height: 100%;
+    cursor: move;
+    opacity:0.8;
+    border: 1px dashed #d6d9df;
+}
+#box p {
+    line-height: 2;
+}
+.ws-height20{
+    height:45px;
+}
+.ws-tab .ws-bodyRoll> tr:nth-child(odd){
+    background-color: #f5f5f5;
+}
+.ws-tab .ws-bodyRoll> tr:hover{
+    background-color: #eaf3fc;
+}
+.ws-headRoll .ws-sort{
+    font-weight: bold;
+    background: url(../imgs/sort.png) no-repeat 0px;
+}
+.ws-sett{
+    line-height: 30px;
+    margin-left:10px;
+}
+.ws-sett-blue{
+    color:#52a4ea;
+}
+.ws-inputbox{
+    float: left;
+    margin: 4px 6px 0 4px;
+    margin: 6px 6px 0 4px;
+    display: inline;
+}
+.ws-inputbox input{
+    background: none;
+    padding:4px;
+    line-height: 35px;
+    line-height: normal;
+    width:160px;
+    border: none;
+    font-size: 14px;
+    color: #999;
+    border:1px solid #d9dfe9;
+}
+.ws-inputImg{
+    width: 45px;
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid #d9dfe9;
+    position: relative;
+    top: 6px;
+    left: -7px;
+}
+.ws-inputImg i{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../imgs/ws-sear.png) no-repeat 98% center transparent;
+    position: relative;
+}
+/*表格结束*/
+
+
+
+
+/*tabTem02样式*/
+.tab-box{
+    position: relative;
+}
+.TableHack9{
+    overflow-x:scroll\9;/*IE8以及以下版本浏览器*/
+    height:390px;\9
+}
+/*IE hack*/
+:root .TableHack9{/*root只有ie9可识别*/
+    overflow-x:scroll\9;
+    height:390px;
+}
+.ie10 .TableHack9 {
+    overflow-x:hidden;
+    height:100%;
+}
+.ws-tdToolTip .wp-tooltip{
+    +float:left;
+}
+/*IE hack结束*/
+.tab-warp{
+    width: 100%;
+    overflow: hidden;
+    table-layout: fixed;
+    font-size: 14px;
+    background-color: #fff;
+}
+.tab-warp tr{
+    border-top:1px solid #dfe2e5;
+    border-left:1px solid #dfe2e5;
+    border-right:1px solid #dfe2e5;
+}
+.tab-warp thead{
+    position: relative;
+    display: block;
+}
+.tab-warp thead tr,.tab-warp tbody tr{
+    width: calc( 100% - 1em );
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.singleRowTable-warp thead tr,.singleRowTable-warp tbody tr{
+    height:40px;
+}
+.multiRowTab-warp tbody tr{
+    height:70px;
+}
+.multiRowTab-warp thead tr{
+    height:40px;
+}
+.tab-warp thead tr th{
+    font-weight: bold;
+}
+.tab-warp thead tr th:first-child, .tab-warp tbody tr td:first-child {
+    width: 50px;
+    text-align: center;
+}
+.tab-warp tbody{
+    display: block;
+    height: 350px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.tab-warp thead tr th:not(:nth-child(2)), .tab-warp tbody tr td:not(:nth-child(2)) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left:15px;
+}
+.multiRowTab-warp thead tr th:not(:nth-child(2)), .multiRowTab-warp tbody tr td>.ToolTipBox:not(:nth-child(2)) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.tab-warp thead tr th:nth-child(2),.tab-warp tbody tr th:nth-child(2){
+    /*text-align: center;*/
+}
+.tab-warp tr th, .tab-warp tr td {
+    width: 185px;
+}
+.tab-warp thead tr th:nth-child(2), .tab-warp tbody tr td:nth-child(2) {
+    width: 170px;
+}
+.tab-warp tbody> tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+.toolText{
+    visibility: hidden;
+    width: 60px;
+    line-height: 25px;
+    background-color: #017be3;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    position: absolute;
+    z-index: 1;
+    top:151%;
+    left:88%;
+    margin-left: -60px;
+}
+.wp-tooltip .toolText::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #017be3 transparent;
+}
+.wp-tooltip:hover .toolText {
+    visibility: visible;
+}
+.tab-warp thead tr th:nth-child(3),.tab-warp tbody tr td:nth-child(3){
+    width:120px;
+}
+.tab-warp thead tr th{
+    cursor: move;
+}
+#box02 {
+    position: absolute;
+    display: none;
+    text-align: center;
+    top: 0;
+    background-color: #edf4fb;
+    height: 100%;
+    cursor: move;
+    opacity:0.8;
+    border:1px dashed #d6d9df;
+}
+#box02 p {
+    line-height: 2.5;
+}
+.sortIco{
+    font-weight: bold;
+    background: url(../imgs/sort.png) no-repeat 0px;
+}
+.tab-warp  tbody> tr:hover{
+    background-color: #ddd;
+}
+/*tabTem02样式结束*/
+
+/*多行数据*/
+#multiRowBox{
+    position: absolute;
+    display: none;
+    text-align: center;
+    top: 0;
+    background-color: #edf4fb;
+    height: 100%;
+    cursor: move;
+    opacity:0.8;
+    border:1px dashed #d6d9df;
+}
+#multiRowBox p {
+    line-height: 2;
+}
+/*多行数据结束*/
+/*查询*/
+.wrapCase{
+    background-color:#fff;
+}
+.wrapGroup{
+    position: relative;
+    vertical-align: middle;
+    /*margin-top: 20px;*/
+    padding:5px 15px 10px 15px;
+}
+.SearchInput{
+    width: 350px;
+    box-sizing: border-box;
+    border: solid 1px #ddd;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+    font-size: 14px;
+    height: 31px;
+    line-height: 1.42857;
+    padding: 5px;
+}
+.SearchText{
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: auto;
+    -webkit-transition: background-color .1s linear;
+    -moz-transition: background-color .1s linear;
+    -o-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+    padding: 5px 12px;
+    font-size: 14px;
+    height: 29px;
+    position: relative;
+    left: -57px;
+}
+.SearchCircle{
+    width: 300px;
+    box-sizing: border-box;
+    border: solid 1px #ddd;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+    font-size: 14px;
+    height: 31px;
+    line-height: 1.42857;
+    padding: 5px;
+    border-bottom-right-radius:50px;
+    border-top-right-radius:50px;
+    border-bottom-left-radius:50px;
+    border-top-left-radius:50px;
+}
+.SearchIMG{
+    vertical-align:middle;
+    position:relative;
+    left:-35px;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+    top: -1px!important;
+}
+.SearchFrom{
+    width: 100%;
+    padding-top: 12px;
+}
+.SearchLevelDl{
+    float: left;
+    text-align: right;
+    margin-right: 2%;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 6px;
+}
+.SearchLevelDl dt{
+    float: left;
+    min-width: 50px;
+    clear: left;
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    height: 26px;
+}
+.SearchLevelDl dd{
+    height: 26px;
+    float: left;
+}
+.SearchLevelDl .SearLevel-input{
+    width:250px;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.SearchLevelSelect{
+    float: left;
+    width: 250px;
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 20px;
+    border: 1px solid #ddd;
+}
+.SearchLevelDt{
+    padding:2px 5px;
+}
+.Sear-Level-date{
+    ertical-align: middle;
+    position: relative;
+    left: -14px;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+    top:-2px;
+}
+.Sear-Level-date2{
+    position: relative;
+    left: -27px;
+    font-size: 20px;
+    color: #333333;
+    top: 29px!important;
+}
+
+.SearchUpDownDl{
+    float: left;
+    text-align: right;
+    margin-right:6%;
+    font-size: 14px;
+    color: #888;
+}
+.SearchUpDownDl dt {
+    float: left;
+    min-width: 50px;
+    clear: left;
+    text-align:left;
+    font-size: 14px;
+    color: #333;
+    height: 26px;
+    padding:0px 0px;
+}
+.SearchUpDownDl .SearLevel-input {
+    width: 250px;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.Sear-UpDown-date img{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: -27px;
+    top:26px;
+}
+.Sear-UpDown-select{
+    width: 175px;
+}
+.focusALL input:focus{
+    outline: 0;
+    border: 1px solid #358ee0;
+    box-shadow: 0px 0px 10px 0px #358ee0;
+}
+.focusLine input:focus{
+    outline: 0;
+    border-bottom: 1px solid #358ee0;
+    box-shadow: 0 1px 0 #358ee0;
+}
+.InputLineDl{
+    float: left;
+    text-align: right;
+    margin-right: 2%;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 6px;
+}
+.InputLineDl dt{
+    float: left;
+    min-width: 50px;
+    clear: left;
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    height: 26px;
+}
+.InputLineDt{
+    padding: 2px 5px;
+}
+.InputLineDl dd {
+    height: 26px;
+    float: left;
+}
+.InputLineDl .InputLine-input{
+    width: 250px;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.InputLineSelect{
+    float: left;
+    width: 250px;
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.InputLine-date img{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: -27px;
+}
+.InputLineUpDownDl{
+    float: left;
+    text-align: right;
+    margin-right:6%;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 6px;
+}
+.InputLineUpDownDl dt {
+    float: left;
+    min-width: 50px;
+    clear: left;
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    height: 26px;
+}
+.InputLineUpDownDt{
+    padding: 2px 5px;
+}
+.InputLineUpDownDl .InputLineUpDown-input{
+    width: 250px;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.InputLineUpDownSelect{
+    float: left;
+    width: 250px;
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.InputLineUpDown-date img{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: -27px;
+    top: 26px;
+}
+.SearchFrom label{
+    float: left;
+}
+.SearDate{
+    position:relative;
+}
+.tickBlue{
+    position: relative;
+    top:3px;
+}
+.tickChange{
+    color: #363f45;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
+    background: url(../imgs/checkbox.png) no-repeat 2% #fff;
+}
+.tickChange-Active {
+    background: url(../imgs/checkbox-selected.png) no-repeat 2% #fff;
+    color: #358ee0;
+}
